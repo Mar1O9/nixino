@@ -81,9 +81,9 @@ in
     enable = true; # Enable the Hydenix module
 
     #! EDIT THESE VALUES
-    hostname = "hydenix"; # Change to your preferred hostname
-    timezone = "America/Vancouver"; # Change to your timezone
-    locale = "en_CA.UTF-8"; # Change to your preferred locale
+    hostname = "nixino"; # Change to your preferred hostname
+    timezone = "Africa/Cairo"; # Change to your timezone
+    locale = "en_US.UTF-8"; # Change to your preferred locale
 
     /*
       Optionally edit the below values, or leave to use hydenix defaults
@@ -110,8 +110,9 @@ in
   };
 
   #! EDIT THESE VALUES (must match users defined above)
-  users.users.hydenix = {
+  users.users.mar = {
     isNormalUser = true; # Regular user account
+    description = "Mar";
     initialPassword = "hydenix"; # Default password (CHANGE THIS after first login with passwd)
     extraGroups = [
       "wheel" # For sudo access

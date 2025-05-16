@@ -4,6 +4,9 @@
   inputs = {
     # User's nixpkgs - for user packages
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    ghostty = {
+        url = "github:ghostty-org/ghostty";
+    };
 
     # Hydenix and its nixpkgs - kept separate to avoid conflicts
     hydenix = {
@@ -25,7 +28,7 @@
   outputs =
     { ... }@inputs:
     let
-      HOSTNAME = "hydenix";
+      HOSTNAME = "nixino";
 
       hydenixConfig = inputs.hydenix.inputs.hydenix-nixpkgs.lib.nixosSystem {
         inherit (inputs.hydenix.lib) system;
